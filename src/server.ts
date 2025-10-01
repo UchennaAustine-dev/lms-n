@@ -1,7 +1,7 @@
-import { config } from "./config/env";
-import { Logger } from "./utils/logger.util";
 import app from "./app.js";
 import { PrismaClient } from "@prisma/client";
+import { config } from "./config/env.js";
+import { Logger } from "./utils/logger.util.js";
 
 const PORT = config.port;
 

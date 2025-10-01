@@ -1,10 +1,13 @@
-import express, { Application } from "express";
+import express, { type Application } from "express";
 import cors from "cors";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
-import { config } from "./config/env";
-import routes from "./routes";
-import { errorHandler, notFoundHandler } from "./middlewares/error.middleware";
+import { config } from "./config/env.js";
+import routes from "./routes/index.js";
+import {
+  errorHandler,
+  notFoundHandler,
+} from "./middlewares/error.middleware.js";
 
 const app: Application = express();
 
