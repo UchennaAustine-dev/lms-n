@@ -173,3 +173,4 @@ docker-compose*.yml
 .pnp.*
 
 package-lock.json
+m.txt

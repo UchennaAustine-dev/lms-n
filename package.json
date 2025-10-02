@@ -1,21 +1,21 @@
 {
   "name": "lms-new",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Loan Management System Backend",
+  "main": "dist/server.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
+    "dev": "nodemon src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
     "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate dev",
+    "prisma:migrate": "prisma migrate deploy",
     "prisma:studio": "prisma studio",
-    "render-build": "npm install && npm run prisma:generate && npm run build"
+    "render-build": "npm install && npm run prisma:generate && npm run build",
+    "seed": "ts-node prisma/seed.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "dependencies": {
     "@prisma/client": "^6.16.2",
     "bcryptjs": "^3.0.2",
@@ -23,26 +23,21 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "express-rate-limit": "^8.1.0",
-    "express-validator": "^7.2.1",
     "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.2",
-    "morgan": "^1.10.1",
-    "pg": "^8.16.3",
+    "multer": "^2.0.2",
     "zod": "^4.1.11"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
-    "@types/express-validator": "^2.20.33",
     "@types/jsonwebtoken": "^9.0.10",
-    "@types/morgan": "^1.9.10",
     "@types/multer": "^2.0.0",
-    "@types/node": "^24.6.0",
-    "multer": "^2.0.2",
+    "@types/node": "^22.0.0",
+    "nodemon": "^3.0.0",
     "prisma": "^6.16.2",
     "ts-node": "^10.9.2",
-    "tsx": "^4.20.6",
     "typescript": "^5.9.2"
   },
   "engines": {
