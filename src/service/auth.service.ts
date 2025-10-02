@@ -1,5 +1,5 @@
-import { PasswordUtil } from "../utils/password.util.js";
-import { JwtUtil } from "../utils/jwt.util.js";
+import { PasswordUtil } from "../utils/password.util";
+import { JwtUtil } from "../utils/jwt.util";
 import { Role } from "../../generated/prisma";
 import { PrismaClient } from "@prisma/client";
 

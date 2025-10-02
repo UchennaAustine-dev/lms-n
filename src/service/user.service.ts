@@ -1,4 +1,4 @@
-import { PasswordUtil } from "../utils/password.util.js";
+import { PasswordUtil } from "../utils/password.util";
 import { Role } from "../../generated/prisma";
 import { PrismaClient } from "@prisma/client";
 

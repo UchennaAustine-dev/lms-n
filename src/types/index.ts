@@ -15,3 +15,20 @@ export interface ApiResponse<T = any> {
     totalPages: number;
   };
 }
+
+import { Role } from "../../generated/prisma";
+
+export interface AuthenticatedUser {
+  id: string;
+  email: string;
+  role: Role;
+  branchId: string | null;
+}
+
+declare global {
+  namespace Express {
+    interface Request {
+      user?: AuthenticatedUser;
+    }
+  }
+}

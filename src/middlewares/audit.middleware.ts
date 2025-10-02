@@ -31,7 +31,7 @@ export const auditLog = (action: string, entityName: string) => {
               userAgent: req.get("user-agent"),
             },
           })
-          .catch((err) => Logger.error("Audit log failed:", err));
+          .catch((err: any) => Logger.error("Audit log failed:", err));
       }
 
       return originalSend(data);

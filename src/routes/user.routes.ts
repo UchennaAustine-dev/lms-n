@@ -1,7 +1,6 @@
 import { Router } from "express";
 import { UserController } from "../controllers/user.controller";
 import { authenticate } from "../middlewares/auth.middleware";
-import { requireAdmin } from "../middlewares/roleCheck.middleware";
 import { validate } from "../middlewares/validation.middleware";
 import { auditLog } from "../middlewares/audit.middleware";
 import {
@@ -9,6 +8,7 @@ import {
   updateUserSchema,
   getUsersSchema,
 } from "../validators/user.validator";
+import { requireAdmin } from "../middlewares/role.middleware";
 
 const router = Router();
 
