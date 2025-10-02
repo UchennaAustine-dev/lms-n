@@ -1,6 +1,7 @@
 import type { Request, Response, NextFunction } from "express";
-import { AuthService } from "../services/auth.service";
 import { ApiResponseUtil } from "../utils/apiResponse.util";
+import { AuthService } from "../service/auth.service";
+import { JwtUtil } from "../utils/jwt.util";
 
 export class AuthController {
   static async login(req: Request, res: Response, next: NextFunction) {
