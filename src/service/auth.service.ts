@@ -1,8 +1,7 @@
 import { PasswordUtil } from "../utils/password.util";
 import { JwtUtil } from "../utils/jwt.util";
-import { Role, PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import { Role } from "@prisma/client";
+import prisma from "../prismaClient";
 
 export class AuthService {
   static async login(

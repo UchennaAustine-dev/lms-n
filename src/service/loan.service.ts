@@ -1,7 +1,7 @@
-import { PrismaClient, LoanStatus, TermUnit, ScheduleStatus, Role } from "@prisma/client";
+import { LoanStatus, TermUnit, ScheduleStatus, Role } from "@prisma/client";
 import { Decimal } from "@prisma/client/runtime/library";
+import prisma from "../prismaClient";
 
-const prisma = new PrismaClient();
 interface CreateLoanData {
   customerId: string;
   loanTypeId?: string;

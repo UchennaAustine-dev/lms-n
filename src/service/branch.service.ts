@@ -1,4 +1,5 @@
-import { PrismaClient, Role } from "@prisma/client";
+import { Role } from "@prisma/client";
+import prisma from "../prismaClient";
 
 interface CreateBranchData {
   name: string;
@@ -11,7 +12,6 @@ interface UpdateBranchData {
   code?: string;
   managerId?: string | null;
 }
-const prisma = new PrismaClient();
 
 export class BranchService {
   static async createBranch(data: CreateBranchData) {

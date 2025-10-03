@@ -1,9 +1,7 @@
 import type { Request, Response, NextFunction } from "express";
 import { JwtUtil } from "../utils/jwt.util";
 import { ApiResponseUtil } from "../utils/apiResponse.util";
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import prisma from "../prismaClient";
 
 export const authenticate = async (
   req: Request,
