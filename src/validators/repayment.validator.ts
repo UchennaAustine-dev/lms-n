@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { RepaymentMethod } from "../../generated/prisma";
+import { RepaymentMethod } from "@prisma/client";
 
 export const createRepaymentSchema = z.object({
   body: z.object({

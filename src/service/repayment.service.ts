@@ -1,8 +1,11 @@
-import { PrismaClient } from "@prisma/client";
-import { RepaymentMethod, ScheduleStatus, Role } from "../../generated/prisma";
+import {
+  RepaymentMethod,
+  ScheduleStatus,
+  Role,
+  LoanStatus,
+} from "@prisma/client";
 import { Decimal } from "@prisma/client/runtime/library";
-
-const prisma = new PrismaClient();
+import prisma from "../prismaClient";
 
 interface CreateRepaymentData {
   loanId: string;
@@ -33,7 +36,7 @@ export class RepaymentService {
       throw new Error("Loan not found");
     }
 
-    if (loan.status !== "ACTIVE") {
+    if (loan.status !== LoanStatus.ACTIVE) {
       throw new Error("Can only make payments on active loans");
     }
 

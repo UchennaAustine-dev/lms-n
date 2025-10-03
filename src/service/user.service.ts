@@ -1,8 +1,6 @@
+import { Role } from "@prisma/client";
+import prisma from "../prismaClient";
 import { PasswordUtil } from "../utils/password.util";
-import { Role } from "../../generated/prisma";
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
 
 interface CreateUserData {
   email: string;

@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { Role } from "../../generated/prisma";
+import { Role } from "@prisma/client";
 import { ApiResponseUtil } from "../utils/apiResponse.util";
 
 export const requireRole = (...roles: Role[]) => {

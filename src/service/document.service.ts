@@ -1,9 +1,7 @@
-import { Role } from "../../generated/prisma";
+import { Role } from "@prisma/client";
 import * as fs from "fs";
 import * as path from "path";
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import prisma from "../prismaClient";
 
 export class DocumentService {
   static async getDocumentTypes() {

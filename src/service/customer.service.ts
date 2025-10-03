@@ -1,7 +1,5 @@
-import { PrismaClient } from "@prisma/client";
-import { Role } from "../../generated/prisma";
-
-const prisma = new PrismaClient();
+import { Role } from "@prisma/client";
+import prisma from "../prismaClient";
 
 interface CreateCustomerData {
   firstName: string;
