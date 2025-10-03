@@ -178,6 +178,7 @@ export class UserService {
         },
         createdAt: true,
         updatedAt: true,
+        deletedAt: true,
       },
     });
 

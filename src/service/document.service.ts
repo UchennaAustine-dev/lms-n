@@ -144,14 +144,8 @@ export class DocumentService {
             email: true,
           },
         },
-        verifiedBy: {
-          select: {
-            id: true,
-            email: true,
-          },
-        },
       },
-      orderBy: { createdAt: "desc" },
+      orderBy: { uploadedAt: "desc" },
     });
 
     return documents;
