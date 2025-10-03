@@ -1,10 +1,4 @@
-import { PrismaClient } from "@prisma/client";
-import {
-  LoanStatus,
-  TermUnit,
-  ScheduleStatus,
-  Role,
-} from "../../generated/prisma";
+import { PrismaClient, LoanStatus, TermUnit, ScheduleStatus, Role } from "@prisma/client";
 import { Decimal } from "@prisma/client/runtime/library";
 
 const prisma = new PrismaClient();
@@ -800,7 +794,7 @@ export class LoanService {
 
     // Only drafts and pending approvals can be deleted
     if (
-      ![LoanStatus.DRAFT, LoanStatus.PENDING_APPROVAL].includes(loan.status)
+      loan.status !== LoanStatus.DRAFT && loan.status !== LoanStatus.PENDING_APPROVAL
     ) {
       throw new Error("Only draft or pending approval loans can be deleted");
     }

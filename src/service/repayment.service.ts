@@ -1,5 +1,4 @@
-import { PrismaClient } from "@prisma/client";
-import { RepaymentMethod, ScheduleStatus, Role } from "../../generated/prisma";
+import { PrismaClient, RepaymentMethod, ScheduleStatus, Role } from "@prisma/client";
 import { Decimal } from "@prisma/client/runtime/library";
 
 const prisma = new PrismaClient();

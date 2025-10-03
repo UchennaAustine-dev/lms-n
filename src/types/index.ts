@@ -16,7 +16,7 @@ export interface ApiResponse<T = any> {
   };
 }
 
-import { Role } from "../../generated/prisma";
+import { Role } from "@prisma/client";
 
 export interface AuthenticatedUser {
   id: string;

@@ -1,7 +1,6 @@
-import { Role } from "../../generated/prisma";
+import { Role, PrismaClient } from "@prisma/client";
 import * as fs from "fs";
 import * as path from "path";
-import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -146,14 +145,8 @@ export class DocumentService {
             email: true,
           },
         },
-        verifiedBy: {
-          select: {
-            id: true,
-            email: true,
-          },
-        },
       },
-      orderBy: { createdAt: "desc" },
+      orderBy: { uploadedAt: "desc" },
     });
 
     return documents;

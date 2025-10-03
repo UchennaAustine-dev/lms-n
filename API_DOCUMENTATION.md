@@ -90,7 +90,7 @@ Login to the system.
       "role": "CREDIT_OFFICER",
       "branchId": "branch-id"
     },
-    "token": "jwt-token",
+    "accessToken": "jwt-token",
     "refreshToken": "refresh-token"
   }
 }
@@ -819,7 +819,7 @@ const loginResponse = await fetch("/api/auth/login", {
 });
 
 const { data } = await loginResponse.json();
-const token = data.token;
+const token = data.accessToken;
 
 // 2. Use token for authenticated requests
 const customersResponse = await fetch("/api/customers", {

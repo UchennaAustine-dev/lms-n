@@ -1,7 +1,6 @@
 import { PasswordUtil } from "../utils/password.util";
 import { JwtUtil } from "../utils/jwt.util";
-import { Role } from "../../generated/prisma";
-import { PrismaClient } from "@prisma/client";
+import { Role, PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 

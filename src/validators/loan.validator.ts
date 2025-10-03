@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { LoanStatus, TermUnit } from "../../generated/prisma";
+import { LoanStatus, TermUnit } from "@prisma/client";
 
 export const createLoanSchema = z.object({
   body: z.object({

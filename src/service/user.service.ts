@@ -1,6 +1,5 @@
 import { PasswordUtil } from "../utils/password.util";
-import { Role } from "../../generated/prisma";
-import { PrismaClient } from "@prisma/client";
+import { Role, PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -180,6 +179,7 @@ export class UserService {
         },
         createdAt: true,
         updatedAt: true,
+        deletedAt: true,
       },
     });
 
